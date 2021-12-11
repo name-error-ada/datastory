@@ -1,0 +1,1 @@
+{"version":3,"sources":["master.scss","master.css"],"names":[],"mappings":"AAAA;EAAI,SAAA;EAAU,UAAA;EAAW,sBAAA;ACIzB","file":"master.css","sourcesContent":["* { margin:0; padding:0; box-sizing:border-box; }","* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}"]}
