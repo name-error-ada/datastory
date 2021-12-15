@@ -1,5 +1,6 @@
 $footer-background: #dddd;
 $footer-text-color: #111;
+$footer-text-color-slightly-lighter: #555;
 
 .footer {
     background-color: $footer-background;
@@ -28,6 +29,36 @@ $footer-text-color: #111;
             max-width: 500px;
             margin: 0 auto;
         }
+    }
+
+    .authors {
+        margin-bottom: 40px;
+        .authors-heading {
+            margin-bottom: 5px;
+            .authors-heading-text {
+                font-size: 1.6em;
+                max-width: 200px;
+                border-bottom: 3px solid #0da540;
+            }
+        }
+        .author-block {
+            box-sizing: border-box;
+            padding: 5px 0;
+
+            .author-name {
+
+            }
+            .author-institution {
+                font-size: .75em;
+                color: $footer-text-color-slightly-lighter;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .row > div:nth-child(even) .author-block {
+                text-align: right;
+            }
+        }   
     }
 
     a {

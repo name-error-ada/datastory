@@ -24,6 +24,30 @@
   max-width: 500px;
   margin: 0 auto;
 }
+.footer .authors {
+  margin-bottom: 40px;
+}
+.footer .authors .authors-heading {
+  margin-bottom: 5px;
+}
+.footer .authors .authors-heading .authors-heading-text {
+  font-size: 1.6em;
+  max-width: 200px;
+  border-bottom: 3px solid #0da540;
+}
+.footer .authors .author-block {
+  box-sizing: border-box;
+  padding: 5px 0;
+}
+.footer .authors .author-block .author-institution {
+  font-size: 0.75em;
+  color: #555;
+}
+@media (min-width: 768px) {
+  .footer .authors .row > div:nth-child(even) .author-block {
+    text-align: right;
+  }
+}
 .footer a {
   color: #0da540;
   font-weight: bold;
