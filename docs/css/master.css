@@ -1,6 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Corinthia:wght@700&display=swap");
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  margin: 5px 0 10px 0;
+}
+.header h1 {
+  text-align: center;
+  font-family: "Corinthia", cursive;
+}
+.header .short-heading-notes {
+  border-top: 1px solid black;
+  border-bottom: 2px solid black;
+  text-align: center;
+}
+
+.introduction .introduction-message {
+  font-family: "Calligraffitti", cursive;
+  font-size: 1.8em;
+}
+.introduction .introduction-photo img {
+  width: 100%;
+}
+
+.footer {
+  background-color: #dddd;
+  color: #111;
+  margin-top: 30px;
+  padding: 50px 0;
+}
+.footer .footer-thanking {
+  font-size: 0.8em;
+}
+.footer .footer-thanking .footer-thanking-text {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: justify;
+  -moz-text-align-last: center;
+       text-align-last: center;
+}
+.footer .team-year-credits {
+  margin-top: 30px;
+  text-align: center;
+}
+.footer .team-year-credits .team-year-credits-text {
+  border-top: 1px solid #111;
+  padding-top: 5px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.footer a {
+  color: #0da540;
+  font-weight: bold;
 }
 /*# sourceMappingURL=master.css.map */

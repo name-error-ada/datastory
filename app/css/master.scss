@@ -1,1 +1,13 @@
-* { margin:0; padding:0; box-sizing:border-box; }
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&display=swap');
+
+// Global
+@import "substyles/base";
+
+// Substyles
+@import "substyles/header";
+@import "substyles/introduction";
+@import "substyles/footer";

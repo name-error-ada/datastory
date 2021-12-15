@@ -1,0 +1,37 @@
+$footer-background: #dddd;
+$footer-text-color: #111;
+
+.footer {
+    background-color: $footer-background;
+    color: $footer-text-color;
+    margin-top: 30px;
+    padding: 50px 0;
+
+    .footer-thanking {
+        font-size: .8em;
+
+        .footer-thanking-text {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: justify;
+            text-align-last: center;
+        }
+    }
+
+    .team-year-credits {
+        margin-top: 30px;
+        text-align: center;
+
+        .team-year-credits-text {
+            border-top: 1px solid $footer-text-color;
+            padding-top: 5px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    a {
+        color: #0da540;
+        font-weight: bold;
+    }
+}
