@@ -9,9 +9,16 @@
 .header {
   margin: 5px 0 10px 0;
 }
-.header h1 {
+.header .heading-block {
+  padding-top: 20px;
+}
+.header .heading-block h1 {
   text-align: center;
   font-family: "Corinthia", cursive;
+}
+.header .repo-github {
+  padding: 10px 0;
+  text-align: center;
 }
 .header .short-heading-notes {
   border-top: 1px solid black;
@@ -21,6 +28,7 @@
 
 .introduction .introduction-message {
   font-family: "Calligraffitti", cursive;
+  text-align: justify;
   font-size: 1.8em;
 }
 .introduction .introduction-photo img {
@@ -30,8 +38,9 @@
 .footer {
   background-color: #dddd;
   color: #111;
-  margin-top: 30px;
+  margin-top: 110px;
   padding: 50px 0;
+  position: relative;
 }
 .footer .footer-thanking {
   font-size: 0.8em;
@@ -66,11 +75,20 @@
 }
 .footer .authors .author-block {
   box-sizing: border-box;
-  padding: 5px 0;
+  padding: 10px 0;
 }
 .footer .authors .author-block .author-institution {
   font-size: 0.75em;
   color: #555;
+}
+.footer .authors .author-block .author-contacts {
+  height: 1.5em;
+}
+.footer .authors .author-block .author-contacts img {
+  max-height: 100%;
+}
+.footer .authors .author-block .author-contacts > *:not(:last-child) {
+  margin-right: 10px;
 }
 @media (min-width: 768px) {
   .footer .authors .row > div:nth-child(even) .author-block {
@@ -80,5 +98,32 @@
 .footer a {
   color: #0da540;
   font-weight: bold;
+}
+.footer .scroll-top-section {
+  height: 80px;
+  width: 160px;
+  border-top-left-radius: 160px;
+  border-top-right-radius: 160px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -80px);
+  background-color: #dddd;
+  text-align: center;
+}
+.footer .scroll-top-section #scroll-top-button {
+  cursor: pointer;
+  margin-top: 25px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 100%;
+  font-size: 2.5em;
+  color: #555;
+  transition: color 400ms ease;
+}
+.footer .scroll-top-section #scroll-top-button:hover {
+  color: #111;
 }
 /*# sourceMappingURL=master.css.map */

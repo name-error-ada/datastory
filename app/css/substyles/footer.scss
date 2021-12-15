@@ -1,12 +1,15 @@
 $footer-background: #dddd;
 $footer-text-color: #111;
 $footer-text-color-slightly-lighter: #555;
+$scroll-top-section-radius: 80px;
+
 
 .footer {
     background-color: $footer-background;
     color: $footer-text-color;
-    margin-top: 30px;
+    margin-top: 30px + $scroll-top-section-radius;
     padding: 50px 0;
+    position: relative;
 
     .footer-thanking {
         font-size: .8em;
@@ -43,14 +46,24 @@ $footer-text-color-slightly-lighter: #555;
         }
         .author-block {
             box-sizing: border-box;
-            padding: 5px 0;
+            padding: 10px 0;
 
             .author-name {
-
+                
             }
             .author-institution {
                 font-size: .75em;
                 color: $footer-text-color-slightly-lighter;
+            }
+            .author-contacts {
+                height: 1.5em;
+                img {
+                    max-height: 100%;
+                }
+
+                & > *:not(:last-child) {
+                    margin-right: 10px;
+                }
             }
         }
 
@@ -58,11 +71,49 @@ $footer-text-color-slightly-lighter: #555;
             .row > div:nth-child(even) .author-block {
                 text-align: right;
             }
-        }   
+        } 
+        
+        // @media (max-width: 768px) {
+        //     .author-block {
+        //         text-align: center;
+        //     }
+        // }
     }
 
     a {
         color: #0da540;
         font-weight: bold;
+    }
+
+    .scroll-top-section {
+        $size: $scroll-top-section-radius;
+
+        height: $size;
+        width: $size * 2;
+        border-top-left-radius: $size * 2;
+        border-top-right-radius: $size * 2;
+
+        position: absolute;
+        left: 50%;
+        top: 0; 
+        transform: translate(-50%, -$size);
+        background-color: $footer-background;
+        text-align: center;
+        #scroll-top-button {
+            cursor: pointer;
+            margin-top: 25px;
+            $button-size: 50px;
+            display: inline-block;
+            width: $button-size;
+            height: $button-size;
+            line-height: $button-size;
+            border-radius: 100%;
+            font-size: 2.5em;
+            color: $footer-text-color-slightly-lighter;
+            transition: color 400ms ease;
+            &:hover {
+                color: $footer-text-color;
+            }
+        }
     }
 }

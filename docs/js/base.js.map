@@ -1,0 +1,1 @@
+{"version":3,"sources":["base.js"],"names":["$","document","ready","on","top","behavior"],"mappings":"aAAAA,EAAEC,UAAUC,MAAM,WACdF,EAAE,sBAAsBG,GAAG,QAAS,WADtCF,OAAUC,SAAM,CAAAE,IAAM,EAAAC,SAAA","file":"base.js","sourcesContent":["$(document).ready(() => {\n    $(\"#scroll-top-button\").on(\"click\", () => {\n        window.scrollTo({top: 0, behavior: 'smooth'});\n    });\n});"]}
