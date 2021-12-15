@@ -4,8 +4,9 @@ const babel = require('gulp-babel')
 const plumber = require('gulp-plumber')
 const sourcemaps = require('gulp-sourcemaps')
 const uglify = require('gulp-uglify')
+const cleanCSS = require('gulp-clean-css')
 const browserSync = require('browser-sync').create()
-var sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer')
 // const DEPENDENCIES = require('./dependencies.js')
 
@@ -50,6 +51,7 @@ function prepareCss() {
     .pipe(sourcemaps.init({ loadMaps: true }))
       .pipe(sass())
       .pipe(autoprefixer())
+      .pipe(cleanCSS())
     .pipe(sourcemaps.write('./'))
     .pipe(dest(`${distFolder}/css`))
 }
