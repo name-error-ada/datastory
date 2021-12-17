@@ -5,9 +5,13 @@ function createTopicPieChart(id, data) {
         type: 'pie'
     }];
 
-    var layout = {};
+    const layout = {};
 
-    Plotly.newPlot(id, toPlot, layout);
+    const config = {
+        responsive: true, // make plot resize with screen
+    }
+
+    Plotly.newPlot(id, toPlot, layout, config);
 }
 
 $(() => {

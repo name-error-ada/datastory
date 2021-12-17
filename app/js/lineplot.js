@@ -73,7 +73,7 @@ function createGeneralSentimentEvolutionPlot(id, data) {
     Plotly.newPlot(id, traces, layout, config);
 }
 
-function createEmotionEvolution(id, data, normalized=false) {
+function createEmotionEvolution(id, data, normalized=false, to_enable_set=[]) {
     const layout = {
         xaxis: {
             title: 'Year'
@@ -83,12 +83,19 @@ function createEmotionEvolution(id, data, normalized=false) {
         }
     };
 
-    const traces = data[normalized ? 'normalized_data' : 'data'].map(v => ({
-        y: v['values'],
-        x: data['year'],
-        name: v['emotion'],
-        mode: 'lines',
-    }));
+    const selectedEmotionSet = new Set(to_enable_set);
+    const traces = data[normalized ? 'normalized_data' : 'data'].map(v => {
+        let trace = {
+            y: v['values'],
+            x: data['year'],
+            name: v['emotion'],
+            mode: 'lines',
+        };
+        if(!selectedEmotionSet.has(v['emotion'])) {
+            trace.visible = 'legendonly';
+        }
+        return trace
+    });
 
     console.log(traces);
 
@@ -106,7 +113,15 @@ $(() => {
         createGeneralSentimentEvolutionPlot('myDiv', data));
 
     d3.json('data/empath_analysis.json').then(data => {
-        createEmotionEvolution('empathChart', data, false);
-        createEmotionEvolution('normalizedEmpathChart', data, true);
+        createEmotionEvolution(
+            'empathChart', 
+            data, 
+            false,
+            ['plant', 'healthy_food', 'animal', 'water', 'death']);
+        createEmotionEvolution(
+            'normalizedEmpathChart', 
+            data, 
+            true,
+            ['healthy_food', 'social_media', 'fear', 'children']);
     });
 });
