@@ -65,7 +65,7 @@ function createGeneralSentimentEvolutionPlot(id, data) {
     const traces = createPlotlyDataMeanWithSem(x, mean, sem, 'black', 'rgba(0, 0, 0, .1)', undefined);
 
     const config = {
-        displayModeBar: false, // hide bar
+        // displayModeBar: false, // hide bar
         // staticPlot: true, // disable moving and zooming
         responsive: true, // make plot resize with screen
     };

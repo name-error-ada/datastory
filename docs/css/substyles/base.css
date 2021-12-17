@@ -1,2 +1,2 @@
-*{font-family:Roboto,sans-serif}.figure{width:100%}
+*{font-family:Roboto,sans-serif}.figure{width:100%}.md-50-else-100{width:100%}@media (min-width:768px){.md-50-else-100{width:50%;margin:0 5px 0 0}}
 /*# sourceMappingURL=base.css.map */
