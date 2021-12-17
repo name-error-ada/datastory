@@ -78,7 +78,7 @@ function createEmotionEvolution(id, data, normalized=false, to_enable_set=[]) {
             title: 'Year'
         },
         yaxis: {
-            title: 'Presence'
+            title: normalized ? 'Presence (normalized by peak presence of the topic)' : 'Presence'
         }
     };
 
@@ -138,7 +138,7 @@ function showAttributeSentimentCorrelation(id, data) {
 
 $(() => {
     d3.json('data/general-sentiment-over-time.json').then(data =>
-        createGeneralSentimentEvolutionPlot('myDiv', data));
+        createGeneralSentimentEvolutionPlot('sentimentChange', data));
 
     d3.json('data/empath_analysis.json').then(data => {
         createEmotionEvolution(
