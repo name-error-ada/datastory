@@ -47,7 +47,6 @@ function createGeneralSentimentEvolutionPlot(id, data) {
     const sem = data['sem'];
 
     const layout = {
-        title: 'Title',
         xaxis: {
             type: 'date',
             tickformat: '%B, %Y',
@@ -97,11 +96,40 @@ function createEmotionEvolution(id, data, normalized=false, to_enable_set=[]) {
         return trace
     });
 
-    console.log(traces);
-
     const config = {
         // displayModeBar: false, // hide bar
         // staticPlot: true, // disable moving and zooming
+        responsive: true, // make plot resize with screen
+    };
+
+    Plotly.newPlot(id, traces, layout, config);
+}
+
+function showAttributeSentimentCorrelation(id, data) {
+    const mainMain = ['rgb(255, 0, 0)', 'rgb(255, 153, 0)', 'rgb(0, 102, 255)', 'rgb(51, 204, 51)'];
+    const ciColors = ['rgba(255, 0, 0, .1)', 'rgba(255, 153, 0, .1)', 'rgba(0, 102, 255, .1)', 'rgba(51, 204, 51, .1)'];
+
+    const traces = data['values'].slice(0, 4).flatMap((v, i) => createPlotlyDataMeanWithSem(
+        data['year'],
+        v['mean'], 
+        v['sem'], 
+        mainMain[i], 
+        ciColors[i],
+        v['value']
+    ));
+
+    const layout = {
+        xaxis: {
+            title: 'Year'
+        },
+        yaxis: {
+            title: 'Sentiment \n(-1 being negative, 1 being positive and 0 being neutral)'
+        }
+    };
+
+    const config = {
+        // displayModeBar: false, // hide bar
+        staticPlot: true, // disable moving and zooming
         responsive: true, // make plot resize with screen
     };
 
@@ -124,4 +152,9 @@ $(() => {
             true,
             ['healthy_food', 'social_media', 'fear', 'children']);
     });
+
+    d3.json('data/gender-sentiment-correlation.json').then(genderData => 
+        showAttributeSentimentCorrelation('genderAttrSentimentPlots', genderData));
+    d3.json('data/occupation-sentiment-correlation.json').then(occupationData => 
+        showAttributeSentimentCorrelation('occupationAttrSentimentPlots', occupationData));
 });
