@@ -123,7 +123,7 @@ function showAttributeSentimentCorrelation(id, data) {
             title: 'Year'
         },
         yaxis: {
-            title: 'Sentiment \n(-1 being negative, 1 being positive and 0 being neutral)'
+            title: 'Sentiment \n(-1 is negative, 1 is positive and 0 is neutral)'
         }
     };
 
