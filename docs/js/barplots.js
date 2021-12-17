@@ -1,2 +1,2 @@
-"use strict";$(function(){Plotly.newPlot("barPlot",[{x:["giraffes","orangutans","monkeys"],y:[20,14,23],type:"bar"}])});
+"use strict";function createQuoteCountPerYearPlot(t,e){e=[{x:e.date.map(function(t){return new Date(t).getFullYear()}),y:e.count,type:"bar"}];Plotly.newPlot(t,e,{xaxis:{type:"category",title:"Year"},yaxis:{title:"Number of quotes"}},{staticPlot:!0,responsive:!0})}$(function(){d3.json("data/count_per_year.json").then(function(t){return createQuoteCountPerYearPlot("barPlot",t)})});
 //# sourceMappingURL=barplots.js.map

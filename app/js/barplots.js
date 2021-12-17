@@ -1,11 +1,32 @@
-$(() => {
+function createQuoteCountPerYearPlot(id, data) {
     var data = [
         {
-            x: ['giraffes', 'orangutans', 'monkeys'],
-            y: [20, 14, 23],
+            x: data['date'].map(d => new Date(d).getFullYear()),
+            y: data['count'],
             type: 'bar'
         }
     ];
 
-    Plotly.newPlot('barPlot', data);
+    const layout = {
+        xaxis: {
+            type: 'category',
+            title: 'Year',
+        },
+        yaxis: {
+            title: 'Number of quotes'
+        }
+    };
+
+    const config = {
+        staticPlot: true, // disable moving and zooming
+        responsive: true, // make plot resize with screen
+    };
+
+    Plotly.newPlot(id, data, layout, config);
+}
+
+
+$(() => {
+    d3.json('data/count_per_year.json').then(data =>
+        createQuoteCountPerYearPlot('barPlot', data));
 });

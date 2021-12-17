@@ -12,7 +12,22 @@
     @media (min-width: 768px) {
         & {
             width: 50%;
-            margin: 0 5px 0 0;
+        }
+    }
+}
+
+.md-margin-right {
+    @media (min-width: 768px) {
+        & {
+            margin-right: 5px;
+        }
+    }
+}
+
+.md-margin-left {
+    @media (min-width: 768px) {
+        & {
+            margin-left: 5px;
         }
     }
 }

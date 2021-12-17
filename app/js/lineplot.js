@@ -70,10 +70,43 @@ function createGeneralSentimentEvolutionPlot(id, data) {
         responsive: true, // make plot resize with screen
     };
 
-    Plotly.newPlot('myDiv', traces, layout, config);
+    Plotly.newPlot(id, traces, layout, config);
+}
+
+function createEmotionEvolution(id, data, normalized=false) {
+    const layout = {
+        xaxis: {
+            title: 'Year'
+        },
+        yaxis: {
+            title: 'Presence'
+        }
+    };
+
+    const traces = data[normalized ? 'normalized_data' : 'data'].map(v => ({
+        y: v['values'],
+        x: data['year'],
+        name: v['emotion'],
+        mode: 'lines',
+    }));
+
+    console.log(traces);
+
+    const config = {
+        // displayModeBar: false, // hide bar
+        // staticPlot: true, // disable moving and zooming
+        responsive: true, // make plot resize with screen
+    };
+
+    Plotly.newPlot(id, traces, layout, config);
 }
 
 $(() => {
     d3.json('data/general-sentiment-over-time.json').then(data =>
         createGeneralSentimentEvolutionPlot('myDiv', data));
+
+    d3.json('data/empath_analysis.json').then(data => {
+        createEmotionEvolution('empathChart', data, false);
+        createEmotionEvolution('normalizedEmpathChart', data, true);
+    });
 });
