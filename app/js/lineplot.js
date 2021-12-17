@@ -72,7 +72,8 @@ function createGeneralSentimentEvolutionPlot(id, data) {
     Plotly.newPlot(id, traces, layout, config);
 }
 
-function createEmotionEvolution(id, data, normalized=false, to_enable_set=[]) {
+function createEmotionEvolution(id, data, normalized=false, to_enable_set=[], selector='emotion') {
+    console.log(data)
     const layout = {
         xaxis: {
             title: 'Year'
@@ -87,10 +88,10 @@ function createEmotionEvolution(id, data, normalized=false, to_enable_set=[]) {
         let trace = {
             y: v['values'],
             x: data['year'],
-            name: v['emotion'],
+            name: v[selector],
             mode: 'lines',
         };
-        if(!selectedEmotionSet.has(v['emotion'])) {
+        if(!selectedEmotionSet.has(v[selector])) {
             trace.visible = 'legendonly';
         }
         return trace
@@ -142,16 +143,20 @@ $(() => {
 
     d3.json('data/empath_analysis.json').then(data => {
         createEmotionEvolution(
-            'empathChart', 
-            data, 
-            false,
-            ['plant', 'healthy_food', 'animal', 'water', 'death']);
-        createEmotionEvolution(
             'normalizedEmpathChart', 
             data, 
             true,
             ['healthy_food', 'social_media', 'fear', 'children']);
     });
+
+    d3.json('data/topic_evolution.json').then(data => {
+        createEmotionEvolution(
+            'topicChart', 
+            data, 
+            false,
+            ['Diet', 'Environment', 'Ethics', 'Health', 'Lifestyle'],
+            'topic');
+    })
 
     d3.json('data/gender-sentiment-correlation.json').then(genderData => 
         showAttributeSentimentCorrelation('genderAttrSentimentPlots', genderData));

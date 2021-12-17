@@ -45,11 +45,9 @@
     <div class="introduction">
       <div class="row">
         <div class="col-md-6 col-12 my-auto introduction-message text-justify">
-          “You cannot get through a single day without having an impact on the world around you. 
+          “The beauty of quotes is that they allow us to glimpse into another minds and understand how they think and look at the world.”
           <br>
-          What you do makes a difference and you have to decide what kind of a difference you want to make.”
-          <br>
-          —Jane Goodall
+          —Joseph Geran III
         </div>
         <div class="col-md-6 col-12 my-auto introduction-photo">
           <img src="img/hand_growth.svg">
@@ -59,15 +57,14 @@
 
     <h3>Introduction</h3>
 
-    <div>
-      <p class="text-justify">
-        Vegetarianism and veganism are undoubtedly among the most discussed topics for the last decades. You probably got a bunch of different opinions on them from the Internet, TV, newspapers, your friends, and maybe even from a small talk to a random person in a line for a coffee on one Monday morning. But who are all of these people talking about vegetarianism and veganism? What unites and separates them? How have these opinions and views been changing with time? People become vegetarians and vegans for different reasons, most ethical, environmental, health, and religious. How do these reasons affect people's opinions? We tried to answer these and some other questions and made this webpage which, we hope, you will enjoy.
-      </p>
 
-      <p class="text-justify">
-        This text started with a quotation. Quotation (to be a little bit more precise, 66584 quotes) is exactly what we used in our investigation. But don't worry we didn't spend all of our time talking to strangers to gather this enormous set of quotes. We took them from a Quotabank, an open dataset of 178 million quotations extracted from 162 million English news articles published between 2008 and 2020. Then we filtered the data and used some solid data analytics tools like sentiment analysis, topic modeling, and regression to get a deeper insight into vegetarianism and veganism evolution.
-      </p>
-    </div>
+    <p class="text-justify">
+      Vegetarianism and veganism are undoubtedly among the most discussed topics for the last decades. You probably got a bunch of different opinions on them from the Internet, TV, newspapers, your friends, and maybe even from a small talk to a random person in a line for a coffee on one Monday morning. But who are all of these people talking about vegetarianism and veganism? What unites and separates them? How have these opinions and views been changing with time and what are other aspects of our life that affect people's opinions on vegetarianism and veganism? We tried to answer these and some other questions and made this webpage which, we hope, you will enjoy.
+    </p>
+
+    <p class="text-justify">
+      This page started with a quotation. Quotation (to be a little bit more precise, 66584 quotes) is exactly what we used in our investigation. But don't worry we didn't spend all of our time talking to strangers to gather this enormous set of quotes. We took them from a Quotabank, an open dataset of 178 million quotations extracted from 162 million English news articles published between 2008 and 2020. Then we filtered the data and used some solid data analytics tools such as sentiment analysis, topic modeling, and regression to get a deeper insight into vegetarianism and veganism evolution.
+    </p>
     
     <hr>
 
@@ -87,25 +84,20 @@
       </figure>
     </div> -->
 
-    <div>
-      <p class="text-justify">
-        The first thing we want to explore is the evolution of media coverage of vegetarianism. Without using numbers, our intuition suggests that this movement is becoming more and more talked about. Indeed, we have all witnessed the appearance of a new brand for a plant-based burger, or videos denouncing animal abuse. The following graph confirms this intuition. The data tells us that media coverage of this movement has grown to achieve a peak in 2018. It is necessary to indicate that the data from 2020 are not complete.
-      </p>
-    </div>
+    <p class="text-justify">
+      The first thing we want to explore is the evolution of media coverage of vegetarianism. Without using numbers, our intuition suggests that this movement is becoming more and more talked about. Indeed, we have all witnessed the appearance of a new brand for a plant-based burger, or videos denouncing animal abuse. The following graph confirms this intuition. The data tells us that media coverage of this movement has grown to achieve a peak in 2018. It is necessary to indicate that the data from 2020 are not complete.
+    </p>
 
     
 
-    <div>
-      <p class="text-justify">
-        A question naturally follows from this observation. How do people feel about this movement? And how has this feeling evolved? We can observe that the general feeling about vegetarianism is rather positive.
-      </p>
-    </div>
-    <div>
-      <p class="text-justify">
-        It is necessary to remember that this analysis concerns quotations taken from the media. In the rest of this story, this result will be deconstructed to try to discover what is hidden under this general impression. Does the sentiment towards the movement depend on a group of individuals?
-      </p>
-    </div>
-
+    <p class="text-justify">
+      A question naturally follows from this observation. How do people feel about this movement? And how has this feeling evolved? We can observe that the general feeling about vegetarianism is rather positive.
+    </p>
+    
+    <p class="text-justify">
+      It is necessary to remember that this analysis concerns quotations taken from the media. In the rest of this story, this result will be deconstructed to discover what is hidden under this general impression. Does the sentiment towards the movement depend on a group of individuals?
+    </p>
+    
     <div>
       <figure class="figure">
         <div id="sentimentChange"></div>
@@ -116,7 +108,9 @@
     <hr>
     <h3>Who are the individuals for and against vegetarianism?</h3>
     
-    <p class="text-justify">The gender of our speakers is dominated by male and female. Overall female speakers tend to have a more positive view about the movement.</p>
+    <p class="text-justify">
+      The first characteristic to be analyzed is the gender of the speakers. Two categories dominate our dataset - male and female. Other categories were present such as transgender female, non-binary, and genderfluid. However, the data for the latter was not sufficient to have robust results. With respect to males and females, they are both stable over time. Nevertheless, the data suggests that women tend to have a more favorable feeling towards vegetarianism than men.
+    </p>
 
     <!-- <div class="float-left md-50-else-100 md-margin-right">
       <figure class="figure">
@@ -144,24 +138,25 @@
       </figure>
     </div>
     
-    <p class="text-justify">The profession is also an aspect that can influence the feeling towards vegetarianism. In our dataset, the most common profession is politician. This is not very surprising given the strong link this category has with the media. Another profession that is highly represented in our dataset is actor. In the following graph, we can observe that actors (for movies or television) have a more positive feeling about vegetarianism than politicians.</p>
+    <p class="text-justify">
+      The profession is also an aspect that can influence the feeling towards vegetarianism. In our dataset, the most common profession is a politician. This is not very surprising given the strong link this category has with the media. Another profession that is highly represented in our dataset is an actor. In the following graph, we can observe that actors (for movies or television) have a more positive feeling about vegetarianism than politicians.
+    </p>
 
-    <p class="text-justify">This probably resonates with most people since actors are often seen as movement starters. Indeed, it is common to see that an actor supports a cause or follows a special diet to be in good shape. This could explain the high score compared to politicians.</p>
+    <p class="text-justify">
+      This probably resonates with most people since actors are often seen as movement starters. Indeed, it is common to see that an actor supports a cause or follows a special diet to be in good shape. This could explain the high score compared to politicians.  
+    </p>
 
-Talking about the final table in the file sentiments_per_time.ipynb
-Talk about Canada and Indians 
-USA is the most represented nationality in our dataset. USA and Canada have a positive view toward the movement.
-sentiments_per_time.ipynb>
+    <p class="text-justify">
+      This first analysis was completed by using linear regression to find features that have a significant effect on the sentiment extracted from the quotations. The aspect that appears to have the most favorable effect on sentiment is occupation. At the top of our list are the following professions: chef, animal rights advocate, and model. This seems to reflect the motivations behind vegetarianism, i.e. nutrition and ethics. Gender also has an effect on sentiment, which confirms our initial results. On the opposite side, the aspects negatively influencing the sentiment are Indian nationality, politician, fashion designer. At first sight, the Indian nationality seems surprising since a large part of the population is vegetarian. However, it should not be forgotten that vegetarianism is a controversial subject that is much talked about in this country. This may explain this result. The fashion designer may also seem surprising at first glance given the distant relationship with food. Let’s recall that our analysis also includes veganism which refuses the exploitation of animals including the use of animals for clothes. This last fact helps to explain the position of the fashion designer in this ranking.
+    </p>
 
     <div style="clear: both"></div>
     <hr>
     <h3>What are the motivations behind vegetarianism/veganism?</h3>
 
-    <div>
-      <p class="text-justify">
-        When we think about vegetarianism, we first view it as a specific diet. But actually, these movements concern more aspects of our life. This set of quotations helps us to identify which other topics can be related to vegetarianism and veganism and gives us a  better understanding of why people speak about these movements.
-      </p>
-    </div>
+    <p class="text-justify">
+      When we think about vegetarianism, we first view it as a specific diet. But actually, these movements concern more aspects of our life. This set of quotations helps us to identify which other topics can be related to vegetarianism and veganism and gives us a  better understanding of why people speak about these movements.
+    </p>
 
     <div class="float-left md-50-else-100 md-margin-right">
       <figure class="figure">
@@ -170,42 +165,33 @@ sentiments_per_time.ipynb>
       </figure>
     </div>
     
-    <div>
-      <p class="text-justify">
-        Vegetarianism is deeply related to many other concerns our society tackles with: environment and ethics are discussed in more than 40% of all quotations and health in around a quarter of them. It’s talked about as a diet itself that much, because speakers are more likely to argue in favor of veganism using relevant fields people are interested in.
-      </p>
-    </div>
+    <p class="text-justify">
+      Vegetarianism is deeply related to many other concerns our society tackles with: environment and ethics are discussed in more than 40% of all quotations and health in around a quarter of them. It’s talked about as a diet itself that much because speakers are more likely to argue in favor of veganism using relevant fields people are interested in.
+    </p>
+    
+    <p class="text-justify">
+      Still, the discussed topics evolve through time, even in the very latest years.
+    </p>
+    
+    <p class="text-justify">
+      Health was the main concern in 2015 and went down since then.
+      But discussions about ethics (including animal rights) have become the most popular, even if it wasn’t referenced that much five years ago.
+      More surprisingly, environmental issues are not as widely tackled as we could expect. It’s not increasing, even decreasing a little bit in comparison with other topics.
 
-    <div>
-      <p class="text-justify">
-        Still, the discussed topics evolve through time, even in the very latest years.
-      </p>
-    </div>
+    </p>  
+    
+    <p class="text-justify">
+      Such a trend is also confirmed when analyzing the most cited organization, PETA (People for the Ethical Treatment of Animals) being at the top with three times more occurrences than the second one.
+    </p>
       
-    <div>
-      <p class="text-justify">
-        Health was the main concern in 2015 and went down since then.
-        But discussions about ethics (including animal rights) have become the most popular, even if it wasn’t referenced that muched five years ago.
-        More surprisingly, environmental issues are not as widely tackled as we could expect. It’s not increasing, even decreasing a little bit in comparison with other topics.
-      </p>  
-    </div>
-
-    <div>
-      <p class="text-justify">
-        Such a trend is also confirmed when analyzing the most cited organization, PETA (People for the Ethical Treatment of Animals) being at the top with three times more occurences than the second one.
-      </p>
-    </div>
-      
-    <div>
-      <p class="text-justify">
-        Emotion analysis also goes along with these results, like “healthy food” or “plant” becoming less recurring. This analysis also expresses the importance that social media have nowadays on these topics and are deeply analyzed by the speakers.
-      </p>
-    </div>
-
+    <p class="text-justify">
+      Emotion analysis also goes along with these results, like “healthy food” or “plant” becoming less recurring. This analysis also expresses the importance that social media have nowadays on these topics and are deeply analyzed by the speakers.
+    </p>
+    
     <div class="row">
       <div class="col-12 col-md-6">
         <figure class="figure">
-          <div id="empathChart"></div>
+          <div id="topicChart"></div>
           <figcaption class="figure-caption text-center text-md-left">Presence of different topics in quotes over time.</figcaption>
         </figure>
       </div>
@@ -220,6 +206,14 @@ sentiments_per_time.ipynb>
     <div style="clear:both"></div>
     <hr>
     <h3>Conclusion</h3>
+
+    <p class="text-justify">
+      What did we learn after this little story? The first observation is that the feeling is rather favorable to the movement and this is in spite of a subject that can be polarizing in many ways. The second observation is that the main motivations behind vegetarianism are health, environment, and ethics. As these issues become more and more important in our society, one would expect vegetarianism to become more and more widespread. Finally, it has been observed that the most extreme feelings concern the professions that can be directly affected by the movement. For example, the chef who creates a meatless menu or the fashion designer who has to consider other materials more respectable to animal causes. 
+    </p>
+
+    <p class="text-justify">
+      However, there are still many open questions as to why someone would adopt the principles of the movement. One could think about using data from social media to better understand the mechanisms behind the adoption of this movement. For example, we could assume that it is more likely to be vegetarian if you have vegetarian friends. This study can be also continued and extended using other speakers' attributes and news articles. Additional datasets (for example, those considering the evolution of some health issues or greenhouse effect) can be also helpful to draw even deeper conclusions about the reasons for a particular emotion concerning vegetarianism and veganism.
+    </p>
   </div>
 
   <div class="footer">
