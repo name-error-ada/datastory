@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
 
 // Global
 @import "substyles/base";
@@ -10,4 +13,5 @@
 // Substyles
 @import "substyles/header";
 @import "substyles/introduction";
+@import "substyles/wordcloud";
 @import "substyles/footer";

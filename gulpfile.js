@@ -16,7 +16,7 @@ const files = {
   css: ['app/css/**/*.css', 'app/css/**/*.sass', 'app/css/**/*.scss'],
   html: 'app/**/*.html',
   data: ['app/**/*.csv', 'app/**/*.json'],
-  images: ['app/**/*.png', 'app/**/*.jpg', 'app/**/*.svg']
+  images: ['app/**/*.png', 'app/**/*.jpg', 'app/**/*.svg', 'app/**/*.ico']
 }
 
 const distFolder = 'docs'

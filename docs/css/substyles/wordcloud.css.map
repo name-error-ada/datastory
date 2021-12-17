@@ -1,0 +1,1 @@
+{"version":3,"sources":["substyles/wordcloud.scss"],"names":[],"mappings":"AAAA,qBACI,MAAA,KACA,MAAA,KAEA,yBACI,qBACI,MAAA,IACA,OAAA,EAAA,IAAA,EAAA","file":"wordcloud.css","sourcesContent":[".wordcloud-container {\n    float: left;\n    width: 100%;\n\n    @media (min-width: 768px) {\n        & {\n            width: 50%;\n            margin: 0 5px 0 0;\n        }\n    }\n}"]}

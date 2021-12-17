@@ -1,6 +1,9 @@
 .introduction {
     .introduction-message {
-        font-family: 'Calligraffitti', cursive;
+        // font-family: 'Calligraffitti', cursive;
+        // font-family: 'Baloo Bhaijaan 2', cursive;
+        font-family: 'Maven Pro', sans-serif;
+        font-style: italic;
         text-align: justify; 
         font-size: 1.8em;
     }
@@ -9,4 +12,6 @@
             width: 100%;
         }
     }
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
 }
