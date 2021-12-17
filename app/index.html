@@ -36,7 +36,7 @@
       </div>
       
       <div class="short-heading-notes">
-        17. 12. 2021. (any arbitary text can go here)
+        December, 2021
       </div>
     </div>
 
@@ -51,10 +51,15 @@
         </div>
       </div>
     </div>
-    
 
-    <p>Image by <a href="https://www.vecteezy.com/free-vector/human">Human Vectors by Vecteezy</a>. (Will likely choose another without need for attribution)</p>
-
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <svg id="wordcloud"></svg>
+      </div>
+      <div class="col-md-6 col-12">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque provident mollitia, quo natus hic odio fuga excepturi perspiciatis veritatis esse incidunt praesentium voluptas odit voluptatem? Vero reiciendis atque aperiam labore!</p>
+      </div>
+    </div>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit ipsum commodi labore est vel assumenda ex ducimus, repellendus explicabo itaque quod. Consequuntur, asperiores sit? Odit delectus debitis quos doloremque!</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit ipsum commodi labore est vel assumenda ex ducimus, repellendus explicabo itaque quod. Consequuntur, asperiores sit? Odit delectus debitis quos doloremque!</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit ipsum commodi labore est vel assumenda ex ducimus, repellendus explicabo itaque quod. Consequuntur, asperiores sit? Odit delectus debitis quos doloremque!</p>
@@ -91,7 +96,7 @@
           <div class="col-md-6 col-12">
             <div class="author-block">
               <div class="author-name">FirstName SecondName</div>
-              <div class="author-institution">An exceptionally long University name</div>
+              <div class="author-institution">École Polytechnique Fédérale de Lausanne</div>
               <div class="author-contacts">
                 <a href=""><img src="img/GitHub-Mark-32px.png" alt=""></a>
                 <a href=""><img src="img/email-round-solid-32px.png" alt=""></a>
@@ -101,7 +106,7 @@
           <div class="col-md-6 col-12">
             <div class="author-block">
               <div class="author-name">FirstName SecondName</div>
-              <div class="author-institution">An exceptionally long University name</div>
+              <div class="author-institution">École Polytechnique Fédérale de Lausanne</div>
               <div class="author-contacts">
                 <a href=""><img src="img/GitHub-Mark-32px.png" alt=""></a>
                 <a href=""><img src="img/email-round-solid-32px.png" alt=""></a>
@@ -111,7 +116,7 @@
           <div class="col-md-6 col-12">
             <div class="author-block">
               <div class="author-name">FirstName SecondName</div>
-              <div class="author-institution">An exceptionally long University name</div>
+              <div class="author-institution">École Polytechnique Fédérale de Lausanne</div>
               <div class="author-contacts">
                 <a href=""><img src="img/GitHub-Mark-32px.png" alt=""></a>
                 <a href=""><img src="img/email-round-solid-32px.png" alt=""></a>
@@ -121,7 +126,7 @@
           <div class="col-md-6 col-12">
             <div class="author-block">
               <div class="author-name">FirstName SecondName</div>
-              <div class="author-institution">An exceptionally long University name</div>
+              <div class="author-institution">École Polytechnique Fédérale de Lausanne</div>
               <div class="author-contacts">
                 <a href=""><img src="img/GitHub-Mark-32px.png" alt=""></a>
                 <a href=""><img src="img/email-round-solid-32px.png" alt=""></a>
@@ -133,7 +138,10 @@
 
       <div class="footer-thanking">
         <div class="footer-thanking-text">
-          <p>This datastory has been created using quotes from English speaking newspapers between 2015 and 2020 provided in <a href="https://quotebank.dlab.tools/">Quotebank</a>.</p>
+          <p>
+            This datastory has been created using quotes from English speaking newspapers between January, 2015 and April, 2020 provided in <a href="https://quotebank.dlab.tools/">Quotebank</a>. 
+            Beautiful vector graphics are provided by <a href="https://www.vecteezy.com/free-vector/human">Human Vectors by Vecteezy</a>.
+          </p>
         </div>
       </div>
     
@@ -144,13 +152,6 @@
       </div>
     </div>
   </div>
-
-  <!-- <footer style="background-color: red; margin-bottom: 0; padding-bottom: 20px" class="container-fluid">
-    <div class="container">
-      <h2>Authors</h2>
-      
-    </div>
-  </footer> -->
 
   <!-- Include libraries from CDN -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -164,7 +165,25 @@
           integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
           crossorigin="anonymous">
   </script>
+
+  <!-- d3.js -->
+  <script src="https://cdn.jsdelivr.net/npm/d3-random@3"></script>
+  <script src="https://d3js.org/d3-color.v2.min.js"></script>
+  <script src="https://d3js.org/d3-dispatch.v2.min.js"></script>
+  <script src="https://d3js.org/d3-ease.v2.min.js"></script>
+  <script src="https://d3js.org/d3-interpolate.v2.min.js"></script>
+  <script src="https://d3js.org/d3-selection.v2.min.js"></script>
+  <script src="https://d3js.org/d3-timer.v2.min.js"></script>
+  <script src="https://d3js.org/d3-transition.v2.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/novus/nvd3@v1.8.1/build/nv.d3.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
+  <!-- <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script> --> -->
+
+  <!-- Custom scripts -->
   <script src="js/base.js"></script>
+  <script src="js/wordcloud.js"></script>
   
 
 </body>
