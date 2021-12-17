@@ -150,6 +150,87 @@
       This first analysis was completed by using linear regression to find features that have a significant effect on the sentiment extracted from the quotations. The aspect that appears to have the most favorable effect on sentiment is occupation. At the top of our list are the following professions: chef, animal rights advocate, and model. This seems to reflect the motivations behind vegetarianism, i.e. nutrition and ethics. Gender also has an effect on sentiment, which confirms our initial results. On the opposite side, the aspects negatively influencing the sentiment are Indian nationality, politician, fashion designer. At first sight, the Indian nationality seems surprising since a large part of the population is vegetarian. However, it should not be forgotten that vegetarianism is a controversial subject that is much talked about in this country. This may explain this result. The fashion designer may also seem surprising at first glance given the distant relationship with food. Let’s recall that our analysis also includes veganism which refuses the exploitation of animals including the use of animals for clothes. This last fact helps to explain the position of the fashion designer in this ranking.
     </p>
 
+    <figure class="figure">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Trait</th>
+            <th scope="col">Coefficient</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Being chef</td>
+            <td>0.126990</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Being animal rights advocate</td>
+            <td>0.093788</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Being model</td>
+            <td>0.063924</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>Being Canadian</td>
+            <td>0.051029</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>Being female</td>
+            <td>-0.139746</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>Being film actor</td>
+            <td>0.050475</td>
+          </tr>
+          <tr>
+            <th scope="row">7</th>
+            <td>Being politician</td>
+            <td>-0.048336</td>
+          </tr>
+          <tr>
+            <th scope="row">8</th>
+            <td>Being television presenter</td>
+            <td>-0.054764</td>
+          </tr>
+          <tr>
+            <th scope="row">9</th>
+            <td>Being Indian</td>
+            <td>-0.063336</td>
+          </tr>
+          <tr>
+            <th scope="row">10</th>
+            <td>Being songwritter</td>
+            <td>-0.079945</td>
+          </tr>
+          <tr>
+            <th scope="row">11</th>
+            <td>Being autobiographer</td>
+            <td>-0.081941</td>
+          </tr>
+          <tr>
+            <th scope="row">12</th>
+            <td>Being journalist</td>
+            <td>-0.113068</td>
+          </tr>
+          <tr>
+            <th scope="row">13</th>
+            <td>Being fashion designer</td>
+            <td>-0.144748</td>
+          </tr>
+        </tbody>
+      </table>
+      <figcaption class="figure-caption text-center">Effect of different traits of a speaker on sentiment of their quotes based on regression analysis (positive coefficients imply positive effect of the trait on sentiment, while negative imply negative effect, absolute value of a coefficient is proportional to the intensity of the effect the trait has on sentiment)</figcaption>
+    </figure>
+    
+
     <div style="clear: both"></div>
     <hr>
     <h3>What are the motivations behind vegetarianism/veganism?</h3>

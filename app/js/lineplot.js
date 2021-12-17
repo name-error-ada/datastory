@@ -73,7 +73,6 @@ function createGeneralSentimentEvolutionPlot(id, data) {
 }
 
 function createEmotionEvolution(id, data, normalized=false, to_enable_set=[], selector='emotion') {
-    console.log(data)
     const layout = {
         xaxis: {
             title: 'Year'
