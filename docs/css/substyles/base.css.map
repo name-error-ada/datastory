@@ -1,1 +1,1 @@
-{"version":3,"sources":["substyles/base.scss"],"names":[],"mappings":"AAAA,EACI,YAAA,MAAA,CAAA","file":"base.css","sourcesContent":["* {\n    font-family: 'Roboto', sans-serif;\n}"]}
+{"version":3,"sources":["substyles/base.scss"],"names":[],"mappings":"AAAA,EACI,YAAA,MAAA,CAAA,WAGJ,QACI,MAAA","file":"base.css","sourcesContent":["* {\n    font-family: 'Roboto', sans-serif;\n}\n\n.figure {\n    width: 100%;\n}"]}

@@ -62,7 +62,7 @@ class WordCloud {
                 .style('font-size', d => `${d.size}px`)
                 .text(d => d.text)
                 .transition(appearTransition)
-                .duration(d => 1000 + (1 - d.size / maxSize) * 5000)
+                .duration(d => 500 + (1 - d.size / maxSize) * 2000)
                 .style('opacity', 1);
         }
     }

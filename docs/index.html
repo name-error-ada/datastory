@@ -29,7 +29,7 @@
           <h1>Understanding Vegetarianism and Veganism Through the Media</h1>
         </div>
         <div class="col-md-1 col-12 my-auto repo-github">
-          <a href="https://github.com/epfl-ada/ada-2021-project-nameerror">
+          <a href="https://github.com/epfl-ada/ada-2021-project-nameerror" target="_blank">
             <img src="img/GitHub-Mark-Light-32px.png" style="background-color: black; border-radius: 105%;">
           </a>
         </div>
@@ -54,12 +54,23 @@
 
     <div class="row">
       <div class="col-md-6 col-12">
-        <svg id="wordcloud"></svg>
+        <figure class="figure">
+          <svg id="wordcloud"></svg>
+          <figcaption class="figure-caption">A caption for the above image.</figcaption>
+        </figure>
+        
       </div>
       <div class="col-md-6 col-12">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque provident mollitia, quo natus hic odio fuga excepturi perspiciatis veritatis esse incidunt praesentium voluptas odit voluptatem? Vero reiciendis atque aperiam labore!</p>
       </div>
     </div>
+    <div>
+      <figure class="figure">
+        <div id="myDiv"></div>
+        <figcaption class="figure-caption text-center">A caption for the above image.</figcaption>
+      </figure>
+    </div>
+    
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit ipsum commodi labore est vel assumenda ex ducimus, repellendus explicabo itaque quod. Consequuntur, asperiores sit? Odit delectus debitis quos doloremque!</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit ipsum commodi labore est vel assumenda ex ducimus, repellendus explicabo itaque quod. Consequuntur, asperiores sit? Odit delectus debitis quos doloremque!</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit ipsum commodi labore est vel assumenda ex ducimus, repellendus explicabo itaque quod. Consequuntur, asperiores sit? Odit delectus debitis quos doloremque!</p>
@@ -95,40 +106,40 @@
         <div class="row" id="author-names">
           <div class="col-md-6 col-12">
             <div class="author-block">
-              <div class="author-name">FirstName SecondName</div>
+              <div class="author-name">Klavdiia Naumova</div>
               <div class="author-institution">École Polytechnique Fédérale de Lausanne</div>
               <div class="author-contacts">
-                <a href=""><img src="img/GitHub-Mark-32px.png" alt=""></a>
+                <a href="https://github.com/klavdiiaN" target="_blank"><img src="img/GitHub-Mark-32px.png" alt=""></a>
                 <a href=""><img src="img/email-round-solid-32px.png" alt=""></a>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-12">
             <div class="author-block">
-              <div class="author-name">FirstName SecondName</div>
+              <div class="author-name">Alexandre Tkatch</div>
               <div class="author-institution">École Polytechnique Fédérale de Lausanne</div>
               <div class="author-contacts">
-                <a href=""><img src="img/GitHub-Mark-32px.png" alt=""></a>
+                <a href="https://github.com/atkatch" target="_blank"><img src="img/GitHub-Mark-32px.png" alt=""></a>
                 <a href=""><img src="img/email-round-solid-32px.png" alt=""></a>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-12">
             <div class="author-block">
-              <div class="author-name">FirstName SecondName</div>
+              <div class="author-name">Romain Wiorowski</div>
               <div class="author-institution">École Polytechnique Fédérale de Lausanne</div>
               <div class="author-contacts">
-                <a href=""><img src="img/GitHub-Mark-32px.png" alt=""></a>
+                <a href="https://github.com/RomainWiorowskiEPFL" target="_blank"><img src="img/GitHub-Mark-32px.png" alt=""></a>
                 <a href=""><img src="img/email-round-solid-32px.png" alt=""></a>
               </div>
             </div>
           </div>
           <div class="col-md-6 col-12">
             <div class="author-block">
-              <div class="author-name">FirstName SecondName</div>
+              <div class="author-name">Milos Vujasinovic</div>
               <div class="author-institution">École Polytechnique Fédérale de Lausanne</div>
               <div class="author-contacts">
-                <a href=""><img src="img/GitHub-Mark-32px.png" alt=""></a>
+                <a href="https://github.com/mvujas" target="_blank"><img src="img/GitHub-Mark-32px.png" alt=""></a>
                 <a href=""><img src="img/email-round-solid-32px.png" alt=""></a>
               </div>
             </div>
@@ -139,8 +150,8 @@
       <div class="footer-thanking">
         <div class="footer-thanking-text">
           <p>
-            This datastory has been created using quotes from English speaking newspapers between January, 2015 and April, 2020 provided in <a href="https://quotebank.dlab.tools/">Quotebank</a>. 
-            Beautiful vector graphics are provided by <a href="https://www.vecteezy.com/free-vector/human">Human Vectors by Vecteezy</a>.
+            This datastory has been created using quotes from English speaking newspapers between January, 2015 and April, 2020 provided in <a href="https://quotebank.dlab.tools/" target="_blank">Quotebank</a>. 
+            Beautiful vector graphics are provided by <a href="https://www.vecteezy.com/free-vector/human" target="_blank">Human Vectors by Vecteezy</a>.
           </p>
         </div>
       </div>
@@ -180,6 +191,8 @@
   <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
   <!-- <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
   <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script> --> -->
+  <script src="https://cdn.plot.ly/plotly-2.6.3.min.js"></script>
+  
 
   <!-- Custom scripts -->
   <script src="js/base.js"></script>
